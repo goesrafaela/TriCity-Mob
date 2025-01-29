@@ -1,16 +1,16 @@
 import React from "react";
-
+import { useNavigation } from "@react-navigation/native";
 import {
   View,
   Text,
   StyleSheet,
   TextInput,
   TouchableOpacity,
-  Dimensions,
 } from "react-native";
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 const CadScreen = () => {
+  const navigation = useNavigation()
   
   return (
     <View style={styles.container}>
@@ -22,7 +22,7 @@ const CadScreen = () => {
         placeholderTextColor="#999"
       />
 
-      <TouchableOpacity style={styles.continueButton}>
+      <TouchableOpacity style={styles.continueButton} onPress={() => navigation.navigate('ConfirmationScreen')}>
         <Text style={styles.continueButtonText}>Continuar</Text>
       </TouchableOpacity>
 
@@ -49,8 +49,7 @@ const CadScreen = () => {
       </TouchableOpacity>
 
       <Text style={styles.footerText}>
-        Você receberá um SMS, e-mail ou pelo WhatsApp. Você concorda em receber
-        chamadas, inclusive automáticas, da TIC/hyWeb.
+        Você receberá um SMS, e-mail ou pelo WhatsApp.
       </Text>
     </View>
   );
@@ -79,7 +78,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   continueButton: {
-    backgroundColor: "#007BFF",
+    backgroundColor: "#6961FE",
     padding: 15,
     borderRadius: 5,
     alignItems: "center",
@@ -109,7 +108,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 1,
     backgroundColor: '#6961FE',
-
+    borderColor: '#6961FE',
     padding: 15,
     borderRadius: 5,
     marginBottom: 10,
