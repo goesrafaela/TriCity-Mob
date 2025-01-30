@@ -80,9 +80,12 @@ const styles = StyleSheet.create({
   continueButton: {
     backgroundColor: "#6961FE",
     padding: 15,
+    width: 198,
+   
     borderRadius: 5,
     alignItems: "center",
-    marginBottom: 20,
+    marginBottom: 15,
+    marginTop: 25
   },
   continueButtonText: {
     color: "#fff",
